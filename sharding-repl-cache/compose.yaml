@@ -214,6 +214,9 @@ services:
       context: api_app
       dockerfile: Dockerfile
     image: kazhem/pymongo_api:1.0.0
+    networks:
+      app-network:
+        ipv4_address: 173.17.0.15
     depends_on:
       - configSrv
       - mongos_router
